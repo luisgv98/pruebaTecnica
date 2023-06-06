@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  &__first-div {
+    order: 2;
+  }
+
+  &__second-div {
+    order: 1;
+  }
+}

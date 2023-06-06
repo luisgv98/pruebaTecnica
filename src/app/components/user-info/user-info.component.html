@@ -1,0 +1,10 @@
+<!-- Ejercicio 2 -->
+<ul *ngIf="userInfo">
+  <li *ngFor="let user of userInfo">
+    {{user.name}} <span *ngIf="user.age >= 18; else menorEdad">Es mayor de edad - {{user.age}}</span> <button (click)="incrementar(user)">incrementar</button>
+
+    <ng-template #menorEdad>
+      <span>Es menor de edad - {{user.age}}</span>
+    </ng-template>
+  </li>
+</ul>
